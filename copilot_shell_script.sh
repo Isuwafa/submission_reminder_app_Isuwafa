@@ -22,7 +22,7 @@ echo
 echo "Updating assignment in configuration file..."
 
 # Use sed to replace the ASSIGNMENT value in config.env
-sed -i "" "s|^ASSIGNMENT=.*|ASSIGNMENT=\"$new_assignment\"|" "$config_file"
+sed -i "s|^ASSIGNMENT=.*|ASSIGNMENT=\"$new_assignment\"|" "$config_file"
 
 echo "rerun startup.sh"
 

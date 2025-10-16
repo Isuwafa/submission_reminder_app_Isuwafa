@@ -99,6 +99,9 @@ echo "Creating startup.sh"
 cat > "$sub_dir/startup.sh" << 'JESUS'
 #!/bin/bash
 
+# Running Submission Reminder App
+echo "Starting submission reminder app"
+
 # Get the directory where this script is located
 sub_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -118,10 +121,11 @@ fi
 
 # Run the reminder application
 echo "Loading reminder application..."
-echo
+
+cd "$sub_dir"
 
 # Execute the reminder.sh script
-"$reminder_file"
+bash $reminder_file
 JESUS
 
 
